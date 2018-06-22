@@ -151,7 +151,8 @@ In this project, we deploy the Catalog Application (Python Flask framework with 
 11. Create Flask configuration file `sudo vi /etc/apache2/sites-available/FlaskApp.conf`.
 12. Add the following lines to catalog.conf:
 
-```<VirtualHost *:80>  
+```
+<VirtualHost *:80>  
 	ServerName 34.220.16.149  
 	ServerAdmin chucklingchuck@gmail.com  
 	WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi  
@@ -167,7 +168,8 @@ In this project, we deploy the Catalog Application (Python Flask framework with 
 	ErrorLog ${APACHE_LOG_DIR}/error.log  
 	LogLevel warn  
 	CustomLog ${APACHE_LOG_DIR}/access.log combined  
-</VirtualHost>```
+</VirtualHost>
+```
 
 13. Start the virtual host.
 
@@ -179,13 +181,15 @@ In this project, we deploy the Catalog Application (Python Flask framework with 
 
 15. Add the following lines to `catalog.wsgi`.
 
-```#!/usr/bin/python  
+```
+#!/usr/bin/python  
 import sys  
 import logging  
 logging.basicConfig(stream=sys.stderr)  
 sys.path.insert(0,"/var/www/FlaskApp/")  
 from FlaskApp import app as application  
-application.secret_key = 'super_secret_key'```
+application.secret_key = 'super_secret_key'
+```
 
 16. Restart Apache2.
 
