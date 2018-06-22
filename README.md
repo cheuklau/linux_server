@@ -4,7 +4,7 @@ Author: Cheuk Lau
 
 Date: 6/21/2018
 
-In this project, we deploy the Catalog Application (Python Flask framework with an SQL backend) using Apache2 running on Amazon Web Services. The website is located at http://34.220.16.149.xip.io. To SSH into the server as the grader type `ssh -i /path/to/key_grader -p 2200 grader@34.220.16.149` into the terminal. The private key `key_grader` is not publicly available.
+In this project, we deploy the Catalog Application (Python Flask framework with an SQL backend) using Apache2 running on Amazon Web Services. The website is located at http://34.220.16.149.xip.io. To SSH into the server as the grader type `ssh -i /path/to/key_grader -p 2200 grader@34.220.16.149` into the terminal. The private key `key_grader` is included in this repository.
 
 ## Get your server
 1. Obtain an account at https://lightsail.aws.amazon.com.
@@ -221,3 +221,22 @@ application.secret_key = 'super_secret_key'
 ## Credits
 
 This project is generated as part of Udacity's full-stack web development program.
+
+## Third-party resources
+
+Useful tutorials for deploying a Flask application on Ubuntu
+1. https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
+2. https://devops.profitbricks.com/tutorials/deploy-a-flask-application-on-ubuntu-1404/
+
+Some previous useful examples:
+1. https://github.com/boisalai/udacity-linux-server-configuration
+2. https://github.com/kongling893/Linux-Server-Configuration-UDACITY
+
+Useful links to project dependencies:
+1. Python `https://docs.python.org/3/`
+2. Flask `http://flask.pocoo.org/docs/1.0/`
+3. Amazon Web Service `https://lightsail.aws.amazon.com/ls/webapp/home/instances`
+4. Ubuntu `https://help.ubuntu.com`
+5. Postgresql `https://help.ubuntu.com`
+6. Apache2 `https://httpd.apache.org/docs/2.4/`
+7. Git `https://www.git-scm.com/doc`
