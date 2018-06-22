@@ -4,7 +4,7 @@ Author: Cheuk Lau
 
 Date: 6/21/2018
 
-In this project, we deploy the Catalog Application (Python Flask framework with an SQL backend) using Apache2 running on Amazon Web Services. The website is located at http://34.220.16.149.xip.io. To SSH into the server as the grader type `ssh -i /path/to/key_grader -p 2200 grader@34.220.16.149` into the terminal. The private key `key_grader` is included in this repository.
+In this project, we deploy the Catalog Application (Python Flask framework with an SQL backend) using Apache2 running on Amazon Web Services. The website is located at http://34.220.16.149.xip.io. To SSH into the server as the grader type `ssh -i /path/to/key_grader -p 2200 grader@34.220.16.149` into the terminal. The private key `key_grader` is included in this repository. The password for `grader` is `password` for sudo access.
 
 ## Get your server
 1. Obtain an account at https://lightsail.aws.amazon.com.
