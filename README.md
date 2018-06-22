@@ -8,8 +8,11 @@ In this project, we deploy the Catalog Application (Python Flask framework with 
 
 ## Get your server
 1. Obtain an account at https://lightsail.aws.amazon.com.
+
 2. Create a new OS project using Ubuntu.
+
 3. Download `amazon_key` and move it to `/home/.ssh`.
+
 4. Log into the server using `ssh -i /home/.ssh/amazon_key ubuntu@34.220.16.149`.
 
 ## Secure your server
@@ -149,7 +152,7 @@ In this project, we deploy the Catalog Application (Python Flask framework with 
 	`sudo python populate_database.py`
 
 11. Create Flask configuration file `sudo vi /etc/apache2/sites-available/FlaskApp.conf`.
-12. Add the following lines to catalog.conf:
+12. Add the following lines to `FlaskApp.conf`:
 
 ```
 <VirtualHost *:80>  
@@ -173,13 +176,13 @@ In this project, we deploy the Catalog Application (Python Flask framework with 
 
 13. Start the virtual host.
 
-	`sudo a2ensite catalog`
+	`sudo a2ensite FlaskApp`
 
 14. Create the WSGI file.
 
-	`sudo vi /var/www/catalog/catalog.wsgi`
+	`sudo vi /var/www/FlaskApp/FlaskApp.wsgi`
 
-15. Add the following lines to `catalog.wsgi`.
+15. Add the following lines to `FlaskApp.wsgi`.
 
 ```
 #!/usr/bin/python  
@@ -197,8 +200,8 @@ application.secret_key = 'super_secret_key'
 
 ## Getting Google Authentication to work
 1. Update `client_secrets.json` if using a new Google App.
-2. Change `client_secrets.json` path in `init.py` to the full path `/var/www/catalog/catalog/client_secrets.json`.
-3. Update `client_id` in `__init.py` if using a new Google App.
+2. Change `client_secrets.json` path in `__init__.py` to the full path `/var/www/FlaskApp/FlaskApp/client_secrets.json`.
+3. Update `client_id` in `__init__.py` if using a new Google App.
 4. Change `app.run(host=*, port=*)` to `app.run()`.
 5. Change gdisconnet link paths to `http://34.220.16.149.xip.io`.
 6. Update  `data-clientid` in `static/login.html` if using a new Google App.
