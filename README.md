@@ -218,10 +218,6 @@ application.secret_key = 'super_secret_key'
 
    	`http://ec2-34-220-16-149.compute-1.amazonaws.com/oauth2callback`
 
-## Credits
-
-This project is generated as part of Udacity's full-stack web development program.
-
 ## Third-party resources
 
 Useful tutorials for deploying a Flask application on Ubuntu
